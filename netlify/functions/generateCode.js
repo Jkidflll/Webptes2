@@ -3,7 +3,7 @@ const sheets = google.sheets('v4');
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 const SHEET_ID = process.env.SHEET_ID; // ID de tu hoja de cálculo
-const SHEET_NAME = 'Hoja1'; // O el nombre de tu hoja (pestaña)
+const SHEET_NAME = 'CodigosAcceso'; // O el nombre de tu hoja (pestaña)
 
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') {
