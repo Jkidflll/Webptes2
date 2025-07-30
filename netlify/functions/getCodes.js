@@ -3,7 +3,7 @@ const sheets = google.sheets('v4');
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 const SHEET_ID = process.env.SHEET_ID;
-const SHEET_NAME = 'Hoja1';
+const SHEET_NAME = 'CodigosAcceso';
 
 exports.handler = async function () {
   const auth = new google.auth.JWT(
