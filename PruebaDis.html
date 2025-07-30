@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prueba Gratis Pop Art</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #0a0a0a;
+      background-image: radial-gradient(#ffcc00 1px, transparent 1px),
+                        radial-gradient(#00ffff 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      color: white;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 3px 3px 0 #ff0051, -3px -3px 0 #00ffff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .btn-popart {
+      background-color: #ff0051;
+      border: 3px dashed #00ffff;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .btn-popart:hover {
+      background-color: #00ffff;
+      color: #000;
+      transform: rotate(-2deg) scale(1.1);
+      box-shadow: 0 0 25px #ff0051;
+    }
+
+    .card {
+      width: 120px;
+      height: 120px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 15px;
+      border: 4px dotted #ffcc00;
+      border-radius: 15px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      box-shadow: 4px 4px 0 #ff0051;
+    }
+
+    .card:hover {
+      transform: scale(1.15) rotate(2deg);
+      filter: brightness(1.2);
+    }
+
+    .card.disabled {
+      opacity: 0.3;
+      pointer-events: none;
+      filter: grayscale(100%);
+      box-shadow: none;
+      border-style: dashed;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-button a {
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px #00ff99;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button a:hover {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .whatsapp-button img {
+      width: 35px;
+      height: 35px;
+    }
+
+    #servicios {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container py-5">
+    <h1 class="display-3 mb-3">¡Prueba Gratis!</h1>
+    <p class="lead mb-4">Explora todos los servicios en un solo lugar</p>
+    <a href="#servicios" class="btn btn-popart">Comenzar ahora</a>
+  </header>
+
+  <main id="servicios" class="container mt-5">
+    <h2 class="mb-4">Servicios disponibles</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+      <!-- Lista completa de servicios -->
+      <div class="card disabled" style="background-image: url('https://cdn.simpleicons.org/netflix');"></div>
+      <div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/90/Prime_Video_logo_%282024%29.svg');"></div>
+      <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/64/Disney%2B_2024.svg');">
+        <a href="https://www.disneyplus.com" target="_blank" title="Disney+" aria-label="Disney+"></a>
+      </div>
+      <div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b3/HBO_Max_%282025%29.svg');"></div>
+      <div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Pluto_TV_logo_2024.svg');"></div>
+      <div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d1/Tubi_logo_2024_black.svg');"></div>
+     
+      <div class="card disabled" style="background-image: url('https://cdn.simpleicons.org/crunchyroll');">
+  <a href="https://www.crunchyroll.com" target="_blank" title="Crunchyroll"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://cdn.simpleicons.org/appletv');">
+  <a href="https://tv.apple.com" target="_blank" title="Apple TV+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Paramount%2B_logo.svg');">
+  <a href="https://www.paramountplus.com" target="_blank" title="Paramount+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/ViX_Logo.svg');">
+  <a href="https://www.vix.com" target="_blank" title="ViX"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Star%2B_logo.svg');">
+  <a href="https://www.starplus.com" target="_blank" title="Star+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Hulu_logo_%282018%29.svg');">
+  <a href="https://www.hulu.com" target="_blank" title="Hulu"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/NBCUniversal_Peacock_Logo.svg');">
+  <a href="https://www.peacocktv.com" target="_blank" title="Peacock"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/ESPN_Plus.svg');">
+  <a href="https://plus.espn.com" target="_blank" title="ESPN+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/06/DAZN_Logo_Master.svg');">
+  <a href="https://www.dazn.com" target="_blank" title="DAZN"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0c/FOX_Sports_logo.svg');">
+  <a href="https://www.foxsports.com/" target="_blank" title="FoxSport"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f1/2019_Discovery_logo.svg');">
+  <a href="https://www.discoveryplus.com" target="_blank" title="Discovery+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/96/CuriosityStream_new.png');">
+  <a href="https://curiositystream.com" target="_blank" title="CuriosityStream"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/WWE_official_logo.svg');">
+  <a href="https://www.WWE.com" target="_blank" title="WWE"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://cdn.simpleicons.org/mubi');">
+  <a href="https://mubi.com" target="_blank" title="MUBI"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/AMC%2B_logo.png');">
+  <a href="https://www.amcplus.com" target="_blank" title="AMC+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/86/BBC_America_logo_2021.svg');">
+  <a href="https://www.britbox.com" target="_blank" title="BBC America"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://www.kanopy.com/kui-assets/img/kanopy-logo.6995257.svg');">
+  <a href="https://www.kanopy.com" target="_blank" title="Kanopy"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://image.hoichoicdn.com/unsafe/fc83d9e777d6-4536-9aac-a9f5f12b7b63-Hoichoi_Logo.svg');">
+  <a href="https://www.hoichoi.tv" target="_blank" title="Hoichoi"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://www.sling.com/content/dam/sling-tv/global-navigation/logo-sling-rebrand.svg');">
+  <a href="https://www.sling.com" target="_blank" title="Sling TV"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/ZEE5_2025.svg');">
+  <a href="https://www.zee5.com" target="_blank" title="ZEE5"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9d/Vidio_logo.svg');">
+  <a href="https://www.vidio.com" target="_blank" title="Vidio"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Disney%2B_Hotstar_2024.svg');">
+  <a href="https://www.hotstar.com" target="_blank" title="Hotstar"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a3/TVING_logo.svg');">
+  <a href="https://www.tving.com" target="_blank" title="TVING"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/IQIYI_logo_%282022%29.svg');">
+  <a href="https://www.iq.com" target="_blank" title="iQIYI"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://cdn.simpleicons.org/bilibili');">
+  <a href="https://www.bilibili.tv" target="_blank" title="Bilibili"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/SBS_2015.png');">
+  <a href="https://www.sbs.com.au/ondemand" target="_blank" title="SBS On Demand"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Australian_Broadcasting_Corporation_logo_%281974-%29.svg');">
+  <a href="https://iview.abc.net.au" target="_blank" title="ABC iView"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/TVNZ_TV_One.svg');">
+  <a href="https://www.tvnz.co.nz" target="_blank" title="TVNZ+"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ed/Rtvecatalunya_color_cuadrado.jpg');">
+  <a href="https://www.ccma.cat/tv3" target="_blank" title="TV3 Catalunya"></a>
+</div>
+<div class="card disabled" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Rakuten_TV_logo.svg');">
+  <a href="https://rakuten.tv" target="_blank" title="Rakuten TV"></a>
+</div>
+
+    </div>
+  </main>
+
+  <!-- WhatsApp -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/529991234567?text=¡Hola!%20Estoy%20interesado%20en%20la%20prueba%20gratis" target="_blank" title="Contáctanos por WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

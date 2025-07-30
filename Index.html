@@ -1,0 +1,246 @@
+npm install googleapis
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlexStreaming - Acceso y Servicios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .banner {
+      background-image: url('FONDO.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 50px 0;
+    }
+    .banner-content {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .btn-animated {
+      background-color: #0037ce;
+      color: white;
+      border: none;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-animated:hover {
+      background-color: #0044ff;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 128, 255, 0.6);
+    }
+    .card {
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      background-color: #1a1a1a;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+    .card a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    footer {
+      background-color: #111;
+      padding: 20px 0;
+      text-align: center;
+      color: #999;
+      margin-top: 50px;
+    }
+    @font-face {
+  font-family: 'Waltograph';
+  src: url('https://dl.dropboxusercontent.com/s/6yo8ixt9fsw9zwz/WaltographUI.ttf') format('truetype');
+}
+.disney-text {
+  font-family: 'Waltograph', cursive;
+  font-size: 2.5rem;
+  color: #2b6af1;
+  text-shadow: 2px 2px 4px #000;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 banner-content">
+            <h4 class="disney-text">Obten tu Año </h4>
+            <h2 class="disney-text">De Disney+ con <img src="Logo.png" alt="Logo" height="50"> </h2>
+            <div class="mt-4">
+               
+              <a href="https://wa.me/521XXXXXXXXXX?text=Hola%20quiero%20más%20información%20sobre%20las%20promocion%20de%20%20un%20ano%20FlexiStreaming" class="btn btn-animated mb-3 w-100">Suscríbete y obtén todo el entretenimiento</a>
+              <a href="Paquetes.html" class="btn btn-animated mb-3 w-100">Conoce todos los paquetes</a>
+              <a href="IndexV.html" class="btn btn-animated w-100">Suscrito, inicia sesión</a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0 text-center">
+            <img src="Lateral.png" alt="Imagen promocional" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mt-5">
+    <h1 class="text-center mb-4">Servicios de <img src="Logo.png" alt="Logo" height="140"> </h1>
+    <div class="d-flex flex-wrap justify-content-center">
+      <!-- Cards de servicios -->
+      <div class="card" style="background-image: url('https://cdn.simpleicons.org/netflix');">
+        <a href="https://www.netflix.com" target="_blank" title="Netflix"></a>
+      </div>
+      <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/90/Prime_Video_logo_%282024%29.svg');">
+    <a href="https://www.primevideo.com" target="_blank" title="Prime Video"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/64/Disney%2B_2024.svg');">
+    <a href="https://www.disneyplus.com" target="_blank" title="Disney+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b3/HBO_Max_%282025%29.svg');">
+    <a href="https://www.max.com" target="_blank" title="Max (HBO)"></a>
+  </div>
+  <div class="card" style="background-image: url('https://cdn.simpleicons.org/crunchyroll');">
+    <a href="https://www.crunchyroll.com" target="_blank" title="Crunchyroll"></a>
+  </div>
+  <div class="card" style="background-image: url('https://cdn.simpleicons.org/tubi');">
+    <a href="https://www.tubitv.com" target="_blank" title="Tubi"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Pluto_TV_logo_2024.svg');">
+    <a href="https://pluto.tv" target="_blank" title="Pluto TV"></a>
+  </div>
+  <div class="card" style="background-image: url('https://cdn.simpleicons.org/appletv');">
+    <a href="https://tv.apple.com" target="_blank" title="Apple TV+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Paramount%2B_logo.svg');">
+    <a href="https://www.paramountplus.com" target="_blank" title="Paramount+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/ViX_Logo.svg');">
+    <a href="https://www.vix.com" target="_blank" title="ViX"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Star%2B_logo.svg');">
+    <a href="https://www.starplus.com" target="_blank" title="Star+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Hulu_logo_%282018%29.svg');">
+    <a href="https://www.hulu.com" target="_blank" title="Hulu"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/NBCUniversal_Peacock_Logo.svg');">
+    <a href="https://www.peacocktv.com" target="_blank" title="Peacock"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/ESPN_Plus.svg');">
+    <a href="https://plus.espn.com" target="_blank" title="ESPN+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/06/DAZN_Logo_Master.svg');">
+    <a href="https://www.dazn.com" target="_blank" title="DAZN"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0c/FOX_Sports_logo.svg');">
+    <a href="https://www.foxsports.com/" target="_blank" title="FoxSport"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f1/2019_Discovery_logo.svg');">
+    <a href="https://www.discoveryplus.com" target="_blank" title="Discovery+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/96/CuriosityStream_new.png');">
+    <a href="https://curiositystream.com" target="_blank" title="CuriosityStream"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/WWE_official_logo.svg');">
+    <a href="https://www.WWE.com" target="_blank" title="WWE"></a>
+  </div>
+  <div class="card" style="background-image: url('https://cdn.simpleicons.org/mubi');">
+    <a href="https://mubi.com" target="_blank" title="MUBI"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/AMC%2B_logo.png');">
+    <a href="https://www.amcplus.com" target="_blank" title="AMC+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/86/BBC_America_logo_2021.svg');">
+    <a href="https://www.britbox.com" target="_blank" title="BBC America"></a>
+  </div>
+  <div class="card" style="background-image: url('https://www.kanopy.com/kui-assets/img/kanopy-logo.6995257.svg');">
+    <a href="https://www.kanopy.com" target="_blank" title="Kanopy"></a>
+  </div>
+  <div class="card" style="background-image: url('https://image.hoichoicdn.com/unsafe/fc83d9e777d6-4536-9aac-a9f5f12b7b63-Hoichoi_Logo.svg');">
+    <a href="https://www.hoichoi.tv" target="_blank" title="Hoichoi"></a>
+  </div>
+  <div class="card" style="background-image: url('https://www.sling.com/content/dam/sling-tv/global-navigation/logo-sling-rebrand.svg');">
+    <a href="https://www.sling.com" target="_blank" title="Sling TV"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/ZEE5_2025.svg');">
+    <a href="https://www.zee5.com" target="_blank" title="ZEE5"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9d/Vidio_logo.svg');">
+    <a href="https://www.vidio.com" target="_blank" title="Vidio"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Disney%2B_Hotstar_2024.svg');">
+    <a href="https://www.hotstar.com" target="_blank" title="Hotstar"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a3/TVING_logo.svg');">
+    <a href="https://www.tving.com" target="_blank" title="TVING"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/IQIYI_logo_%282022%29.svg');">
+    <a href="https://www.iq.com" target="_blank" title="iQIYI"></a>
+  </div>
+  <div class="card" style="background-image: url('https://cdn.simpleicons.org/bilibili');">
+    <a href="https://www.bilibili.tv" target="_blank" title="Bilibili"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/SBS_2015.png');">
+    <a href="https://www.sbs.com.au/ondemand" target="_blank" title="SBS On Demand"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Australian_Broadcasting_Corporation_logo_%281974-%29.svg');">
+    <a href="https://iview.abc.net.au" target="_blank" title="ABC iView"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/TVNZ_TV_One.svg');">
+    <a href="https://www.tvnz.co.nz" target="_blank" title="TVNZ+"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ed/Rtvecatalunya_color_cuadrado.jpg');">
+    <a href="https://www.ccma.cat/tv3" target="_blank" title="TV3 Catalunya"></a>
+  </div>
+  <div class="card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Rakuten_TV_logo.svg');">
+    <a href="https://rakuten.tv" target="_blank" title="Rakuten TV"></a>
+  </div>
+      <!-- Agrega más tarjetas aquí -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FlexStreaming. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
